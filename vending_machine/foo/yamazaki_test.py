@@ -8,4 +8,5 @@ class Huga:
 
     def piyo(self) -> str:
         """return piyo"""
+        # kamoi test
         return "piyo"
