@@ -1,9 +1,7 @@
 class VendingMachine:
     def __init__(self):
         self.total_money_amount = 0
-        self.juice_dict = {
-            "コーラ": Juice(price=120, name="コーラ", stock=5)
-        }  # Juiceと本数を渡す {"cola":(Juice, stock)}
+        self.juice_dict = {"コーラ": Juice(price=120, name="コーラ", stock=5)}
         self.sales_amount = 0
 
     def insert_money(self, money):
@@ -21,8 +19,6 @@ class VendingMachine:
 
     def purchase(self, juice_name):
         pass
-        # if juice_name in self.juice_dict.keys():
-        #     self.juice_dict[juice_name].stock > 0
 
 
 class Juice:
