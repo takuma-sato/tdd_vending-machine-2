@@ -2,6 +2,7 @@
 
 # yokota_test
 
+
 class Huga:
     """
     Huga class
@@ -11,3 +12,6 @@ class Huga:
         """return piyo"""
         # kamoi test
         return "piyo"
+
+
+# yamazaki test
