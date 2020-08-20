@@ -34,6 +34,8 @@ class VendingMachine:
             return None
 
     def check_purchace(self,name):
+   
+   
         if name not in self.juice_dict:
             return False
         elif self.total_money_amount < self.juice_dict[name]['price']:
@@ -41,15 +43,15 @@ class VendingMachine:
         else:
             return self.juice_dict[name]['stock'] > 0
 
-class JuicePrice:
-    def __init__(self, price, name, stock) -> None:
-        self.price = price
-        self.name = name 
+# class JuicePrice:
+#     def __init__(self, price, name, stock) -> None:
+#         self.price = price
+#         self.name = name 
     
 
-class JuiceStock:
-    def __init__(self, stock, name) -> None:
-        self.stock = stock
-        self.name = name
+# class JuiceStock:
+#     def __init__(self, stock, name) -> None:
+#         self.stock = stock
+#         self.name = name
 
-    def set_stock
+#     def set_stock
