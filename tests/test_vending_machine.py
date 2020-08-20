@@ -26,10 +26,33 @@ class TestVendingMachine:
     ### todo
     def test_check_stock(self):
         vm = VendingMachine()
-
-        assert vm.check_stock("コーラ") == 5
+        name ='コーラ'
+        assert vm.check_stock(name) == 5
+        name ='スプライト'
+        assert vm.check_stock(name) is None
 
     def test_check_price(self):
         vm = VendingMachine()
-        assert vm.check_stock("コーラ") == 120
+        name ='コーラ'
+        assert vm.check_price(name) == 120
+        name ='スプライト'
+        assert vm.check_price(name) is None
 
+    def test_check_purchace(self):
+        vm = VendingMachine()
+        name ='コーラ'
+        vm.insert_money(10)
+        assert vm.check_purchace(name) == False
+        vm = VendingMachine()
+        name ='スプライト'
+        vm.insert_money(10)
+        assert vm.check_purchace(name) == False
+        vm = VendingMachine()
+        name ='スプライト'
+        vm.insert_money(500)
+        assert vm.check_purchace(name) == False
+        vm = VendingMachine()
+        name ='コーラ'
+        vm.insert_money(500)
+        assert vm.check_purchace(name) == True
+        
