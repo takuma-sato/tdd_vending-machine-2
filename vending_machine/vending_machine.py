@@ -1,7 +1,8 @@
 class VendingMachine:
     def __init__(self):
         self.total_money_amount = 0
-        self.juice_dict = {"コーラ": Juice(price=120, name="コーラ", stock=5)}
+        self.juice_price_dict = {"コーラ": Juice(price=120, name="コーラ")}
+        self.juice_stock_dict = {"コーラ": 5}
         self.sales_amount = 0
 
     def insert_money(self, money):
@@ -24,5 +25,9 @@ class VendingMachine:
 class Juice:
     def __init__(self, price, name, stock) -> None:
         self.price = price
-        self.name = name
+
+
+class Stock:
+    def __init__(self, stock, name) -> None:
         self.stock = stock
+        self.name = name
